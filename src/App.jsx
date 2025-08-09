@@ -38,7 +38,7 @@ function App() {
       // Hero Section
       hero: {
         title: 'معدات التأجير الاحترافية، بكل بساطة',
-        subtitle: 'Professional Equipment Rental, Simplified',
+        subtitle: 'تأجير المعدات أصبح أسهل للجميع',
         description: 'اكتشف أكبر منصة لتأجير المعدات في المملكة العربية السعودية. من معدات الفعاليات إلى المعدات الرياضية، نربطك بأفضل الموردين المحليين.',
         cta: 'ابدأ الآن',
         downloadApp: 'حمل التطبيق'
@@ -196,7 +196,7 @@ function App() {
       // Hero Section
       hero: {
         title: 'Professional Equipment Rental, Simplified',
-        subtitle: 'معدات التأجير الاحترافية، بكل بساطة',
+        subtitle: 'Equipment Rental Made Easier for Everyone',
         description: 'Discover Saudi Arabia\'s largest equipment rental marketplace. From event equipment to sports gear, we connect you with the best local suppliers.',
         cta: 'Get Started',
         downloadApp: 'Download App'
