@@ -1,0 +1,283 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Arakne Brand Colors */
+  --arakne-cream: #f5f1eb;
+  --arakne-dark: #2c2c2c;
+  
+  /* Theme colors using brand colors */
+  --background: var(--arakne-cream);
+  --foreground: var(--arakne-dark);
+  --card: var(--arakne-cream);
+  --card-foreground: var(--arakne-dark);
+  --popover: var(--arakne-cream);
+  --popover-foreground: var(--arakne-dark);
+  --primary: var(--arakne-dark);
+  --primary-foreground: var(--arakne-cream);
+  --secondary: var(--arakne-cream);
+  --secondary-foreground: var(--arakne-dark);
+  --muted: var(--arakne-cream);
+  --muted-foreground: var(--arakne-dark);
+  --accent: var(--arakne-dark);
+  --accent-foreground: var(--arakne-cream);
+  --destructive: var(--arakne-dark);
+  --border: var(--arakne-dark);
+  --input: var(--arakne-cream);
+  --ring: var(--arakne-dark);
+  --chart-1: var(--arakne-dark);
+  --chart-2: var(--arakne-dark);
+  --chart-3: var(--arakne-dark);
+  --chart-4: var(--arakne-dark);
+  --chart-5: var(--arakne-dark);
+  --sidebar: var(--arakne-cream);
+  --sidebar-foreground: var(--arakne-dark);
+  --sidebar-primary: var(--arakne-dark);
+  --sidebar-primary-foreground: var(--arakne-cream);
+  --sidebar-accent: var(--arakne-cream);
+  --sidebar-accent-foreground: var(--arakne-dark);
+  --sidebar-border: var(--arakne-dark);
+  --sidebar-ring: var(--arakne-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', 'Cairo', sans-serif;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Staggered animations */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Hover effects */
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--arakne-dark);
+  color: var(--arakne-cream);
+  border: 2px solid var(--arakne-dark);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--arakne-cream);
+  color: var(--arakne-dark);
+  border: 2px solid var(--arakne-dark);
+}
+
+.btn-secondary {
+  background-color: var(--arakne-cream);
+  color: var(--arakne-dark);
+  border: 2px solid var(--arakne-dark);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--arakne-dark);
+  color: var(--arakne-cream);
+  border: 2px solid var(--arakne-dark);
+}
+
+/* Category card styles */
+.category-card {
+  background-color: var(--arakne-cream);
+  border: 2px solid var(--arakne-dark);
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  background-color: var(--arakne-dark);
+  color: var(--arakne-cream);
+  transform: translateY(-5px);
+}
+
+.category-card:hover .category-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Language toggle */
+.language-toggle {
+  background-color: var(--arakne-dark);
+  color: var(--arakne-cream);
+  border: 2px solid var(--arakne-dark);
+  transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+  background-color: var(--arakne-cream);
+  color: var(--arakne-dark);
+}
+
+/* Hero section */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--arakne-cream) 0%, var(--arakne-cream) 100%);
+}
+
+/* Section dividers */
+.section-divider {
+  border-color: var(--arakne-dark);
+  opacity: 0.2;
+}
+
