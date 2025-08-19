@@ -763,8 +763,8 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">{isArabic ? 'تواصل معنا' : 'Contact Us'}</h4>
               <div className="space-y-2 opacity-80">
-                <p>info@arakne.com.sa</p>
-                <p>+966 11 123 4567</p>
+                <p>ceo@arakne.com.sa</p>
+                <span className='flex'><pre style={{direction: 'ltr'}}>+966595500900</pre></span>
               </div>
             </div>
           </div>
