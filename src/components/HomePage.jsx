@@ -32,8 +32,8 @@ function HomePage() {
       nav: {
         home: 'الرئيسية',
         categories: 'الفئات',
-        about: 'حولنا',
-        contact: 'اتصل بنا'
+        // about: 'حولنا',
+        // contact: 'اتصل بنا'
       },
       // Hero Section
       hero: {
@@ -190,8 +190,8 @@ function HomePage() {
       nav: {
         home: 'Home',
         categories: 'Categories',
-        about: 'About',
-        contact: 'Contact'
+        // about: 'About',
+        // contact: 'Contact'
       },
       // Hero Section
       hero: {
