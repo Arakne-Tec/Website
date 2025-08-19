@@ -1,37 +1,72 @@
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Shield, Lock, Eye, FileText } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link 
             to="/" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4"
+            className="inline-flex items-center text-blue-100 hover:text-white mb-6 transition-colors duration-200"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Privacy Policy for ARAKNE Platform
-          </h1>
-          <p className="text-gray-600">
-            Effective Date: July 2, 2025
-          </p>
+          <div className="flex items-center mb-4">
+            <Shield className="w-12 h-12 mr-4 text-blue-200" />
+            <div>
+              <h1 className="text-4xl font-bold mb-2">
+                Privacy Policy
+              </h1>
+              <p className="text-xl text-blue-100">
+                ARAKNE Platform
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center text-blue-200">
+            <FileText className="w-5 h-5 mr-2" />
+            <p className="text-lg">
+              Effective Date: July 2, 2025
+            </p>
+          </div>
         </div>
+      </div>
 
-        {/* Content */}
-        <div className="bg-white rounded-lg shadow-sm p-8">
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        {/* Introduction Card */}
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
+          <div className="flex items-start mb-6">
+            <div className="bg-blue-100 rounded-full p-3 mr-4">
+              <Eye className="w-6 h-6 text-blue-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome</h2>
+              <p className="text-gray-600">Your privacy matters to us</p>
+            </div>
+          </div>
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Welcome to the Privacy Policy of ARAKNE Platform (referred to herein as "the Platform," "the Website," or "the Application"). At ARAKNE, we are committed to protecting the privacy and personal data of our users. This policy explains how we collect, use, and disclose the information we gather from you when you use our Platform, whether you are a lessor or a lessee. Please read this policy carefully to understand our practices regarding your data.
             </p>
+          </div>
+        </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              1. Introduction
-            </h2>
+        {/* Main Content Card */}
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+          <div className="prose prose-lg max-w-none">
+
+            <div className="flex items-center mb-6 mt-8">
+              <div className="bg-indigo-100 rounded-full p-2 mr-3">
+                <FileText className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                1. Introduction
+              </h2>
+            </div>
             <p className="mb-4">
               This Privacy Policy describes the types of information we may collect from you or that you may provide when you visit or use the ARAKNE Platform, and our practices for collecting, using, maintaining, protecting, and disclosing that information. This policy applies to information we collect:
             </p>
@@ -53,9 +88,14 @@ function PrivacyPolicy() {
               Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is not to use our Platform. By accessing or using this Platform, you agree to this Privacy Policy. This policy may change from time to time (see Changes to Our Privacy Policy). Your continued use of this Platform after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              2. Information We Collect About You and How We Collect It
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-green-100 rounded-full p-2 mr-3">
+                <Eye className="w-5 h-5 text-green-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                2. Information We Collect About You and How We Collect It
+              </h2>
+            </div>
             <p className="mb-4">
               We collect several types of information from and about users of our Platform, including information:
             </p>
@@ -74,9 +114,11 @@ function PrivacyPolicy() {
               <li>From third parties, for example, our business partners.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-              2.1. Information You Provide to Us:
-            </h3>
+            <div className="bg-gray-50 rounded-xl p-6 mt-8 mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                2.1. Information You Provide to Us:
+              </h3>
             <p className="mb-4">
               The information we collect on or through our Platform may include:
             </p>
@@ -88,13 +130,16 @@ function PrivacyPolicy() {
               <li>Your search queries on the Platform.</li>
             </ul>
 
-            <p className="mb-4">
-              You may also provide information to be published or displayed (hereinafter, "posted") on public areas of the Platform, or transmitted to other users of the Platform or third parties (collectively, "User Contributions"). Your User Contributions are posted on and transmitted to you at your own risk. Although we may allow you to set certain privacy settings for such information by logging into your account profile, please be aware that no security measures are perfect or impenetrable. Additionally, we cannot control the actions of other users of the Platform with whom you may choose to share your User Contributions. Therefore, we cannot and do not guarantee that your User Contributions will not be viewed by unauthorized persons.
-            </p>
+              <p className="mb-4 text-gray-700">
+                You may also provide information to be published or displayed (hereinafter, "posted") on public areas of the Platform, or transmitted to other users of the Platform or third parties (collectively, "User Contributions"). Your User Contributions are posted on and transmitted to you at your own risk. Although we may allow you to set certain privacy settings for such information by logging into your account profile, please be aware that no security measures are perfect or impenetrable. Additionally, we cannot control the actions of other users of the Platform with whom you may choose to share your User Contributions. Therefore, we cannot and do not guarantee that your User Contributions will not be viewed by unauthorized persons.
+              </p>
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-              2.2. Information We Collect Through Automatic Data Collection Technologies:
-            </h3>
+            <div className="bg-blue-50 rounded-xl p-6 mt-8 mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                2.2. Information We Collect Through Automatic Data Collection Technologies:
+              </h3>
             <p className="mb-4">
               As you navigate through and interact with our Platform, we may use automatic data collection technologies to collect certain information about your equipment, browsing actions, and patterns, including:
             </p>
@@ -116,14 +161,23 @@ function PrivacyPolicy() {
             <p className="mb-4">
               The technologies we use for this automatic data collection may include:
             </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li><strong>Cookies (or Browser Cookies):</strong> A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting you may be unable to access certain parts of our Platform. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Platform.</li>
-              <li><strong>Web Beacons:</strong> Pages of our Platform and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</li>
-            </ul>
+              <ul className="space-y-3 mb-4">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Cookies (or Browser Cookies):</strong> <span className="text-gray-700">A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting you may be unable to access certain parts of our Platform. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Platform.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Web Beacons:</strong> <span className="text-gray-700">Pages of our Platform and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</span></div>
+                </li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-              2.3. Camera Usage:
-            </h3>
+            <div className="bg-purple-50 rounded-xl p-6 mt-8 mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                2.3. Camera Usage:
+              </h3>
             <p className="mb-4">
               The ARAKNE application may request permission to access your device's camera. This permission is used exclusively for the following purposes:
             </p>
@@ -133,9 +187,10 @@ function PrivacyPolicy() {
               <li><strong>Identity Verification:</strong> In some cases, we may require you to capture images of identification documents for account verification and security purposes, ensuring a safe and trusted environment for all users.</li>
             </ul>
 
-            <p className="mb-4">
-              We do not access or use your camera for any purpose other than those explicitly stated above. No photos or videos captured using the camera are stored unless you explicitly upload them to the application as part of an application function (e.g., profile pictures or product photos). All data collected via the camera is handled in accordance with this Privacy Policy and our strict data security standards, and in compliance with Google Play Store, Apple App Store, and Saudi Personal Data Protection Law (PDPL) requirements.
-            </p>
+              <p className="mb-4 text-gray-700">
+                We do not access or use your camera for any purpose other than those explicitly stated above. No photos or videos captured using the camera are stored unless you explicitly upload them to the application as part of an application function (e.g., profile pictures or product photos). All data collected via the camera is handled in accordance with this Privacy Policy and our strict data security standards, and in compliance with Google Play Store, Apple App Store, and Saudi Personal Data Protection Law (PDPL) requirements.
+              </p>
+            </div>
 
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
               2.4. User-Submitted Content (Photos and Media):
@@ -159,42 +214,101 @@ function PrivacyPolicy() {
               Geolocation data is collected with your explicit consent, and you can disable this feature at any time from your device settings. All geolocation data is handled in accordance with this Privacy Policy and our strict data security standards, and in compliance with Google Play Store, Apple App Store, and Saudi Personal Data Protection Law (PDPL) requirements.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              3. How We Use Your Information
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-orange-100 rounded-full p-2 mr-3">
+                <Lock className="w-5 h-5 text-orange-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                3. How We Use Your Information
+              </h2>
+            </div>
             <p className="mb-4">
               We use information that we collect about you or that you provide to us, including any personal information:
             </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>To present our Platform and its contents to you.</li>
-              <li>To provide you with information, products, or services that you request from us.</li>
-              <li>To fulfill any other purpose for which you provide it.</li>
-              <li>To provide you with notices about your account/subscription, including expiration and renewal notices.</li>
-              <li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection.</li>
-              <li>To notify you about changes to our Platform or any products or services we offer or provide through it.</li>
-              <li>To allow you to participate in interactive features on our Platform.</li>
-              <li>In any other way we may describe when you provide the information.</li>
-              <li>For any other purpose with your consent.</li>
-            </ul>
+            <div className="bg-orange-50 rounded-xl p-6 mb-6">
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To present our Platform and its contents to you.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To provide you with information, products, or services that you request from us.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To fulfill any other purpose for which you provide it.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To provide you with notices about your account/subscription, including expiration and renewal notices.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To notify you about changes to our Platform or any products or services we offer or provide through it.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To allow you to participate in interactive features on our Platform.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">In any other way we may describe when you provide the information.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">For any other purpose with your consent.</span>
+                </li>
+              </ul>
+            </div>
 
             <p className="mb-4">
               We may also use your information to contact you about our own and third-parties' goods and services that may be of interest to you. If you do not want us to use your information in this way, please adjust your user preferences in your account profile.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              4. Disclosure of Your Information
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-red-100 rounded-full p-2 mr-3">
+                <Shield className="w-5 h-5 text-red-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                4. Disclosure of Your Information
+              </h2>
+            </div>
             <p className="mb-4">
               We may disclose aggregated information about our users, and information that does not identify any individual, without restriction. We may disclose personal information that we collect or you provide as described in this Privacy Policy:
             </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>To our subsidiaries and affiliates.</li>
-              <li>To contractors, service providers, and other third parties we use to support our business and who are bound by contractual obligations to keep personal information confidential and use it only for the purposes for which we disclose it to them.</li>
-              <li>To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of ARAKNE Technology's assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which personal information held by ARAKNE Technology about our Platform users is among the assets transferred.</li>
-              <li>To fulfill the purpose for which you provide it.</li>
-              <li>For any other purpose disclosed by us when you provide the information.</li>
-              <li>With your consent.</li>
-            </ul>
+            <div className="bg-red-50 rounded-xl p-6 mb-6">
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To our subsidiaries and affiliates.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To contractors, service providers, and other third parties we use to support our business and who are bound by contractual obligations to keep personal information confidential and use it only for the purposes for which we disclose it to them.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of ARAKNE Technology's assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which personal information held by ARAKNE Technology about our Platform users is among the assets transferred.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">To fulfill the purpose for which you provide it.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">For any other purpose disclosed by us when you provide the information.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-700">With your consent.</span>
+                </li>
+              </ul>
+            </div>
 
             <p className="mb-4">
               We may also disclose your personal information:
@@ -205,9 +319,14 @@ function PrivacyPolicy() {
               <li>If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of ARAKNE Technology, our customers, or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              5. Choices About How We Use and Disclose Your Information
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-teal-100 rounded-full p-2 mr-3">
+                <Eye className="w-5 h-5 text-teal-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                5. Choices About How We Use and Disclose Your Information
+              </h2>
+            </div>
             <p className="mb-4">
               We strive to provide you with choices regarding the personal information you provide to us. We have created mechanisms to provide you with the following control over your information:
             </p>
@@ -216,16 +335,26 @@ function PrivacyPolicy() {
               <li><strong>Promotional Offers from the Company:</strong> If you do not wish to have our Company use your contact information to promote our own or third parties' products or services, you can opt-out by adjusting your user preferences in your account profile.</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              6. Accessing and Correcting Your Information
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-cyan-100 rounded-full p-2 mr-3">
+                <FileText className="w-5 h-5 text-cyan-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                6. Accessing and Correcting Your Information
+              </h2>
+            </div>
             <p className="mb-4">
               You can review and change your personal information by logging into the Platform and visiting your account profile page. You may also send us an email at [Support Email Address] to request access to, correct, or delete any personal information that you have provided to us. We cannot delete your personal information except by also deleting your user account. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or cause the information to be incorrect. If you delete your User Contributions from the Platform, copies of your User Contributions may remain viewable in cached and archived pages, or might have been copied or stored by other Platform users.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              7. Data Security
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-emerald-100 rounded-full p-2 mr-3">
+                <Lock className="w-5 h-5 text-emerald-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                7. Data Security
+              </h2>
+            </div>
             <p className="mb-4">
               We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. All information you provide to us is stored on our secure servers behind firewalls. Any payment transactions will be encrypted using SSL technology.
             </p>
@@ -238,16 +367,26 @@ function PrivacyPolicy() {
               Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our Platform. Any transmission of personal information is at your own risk. We are not responsible for circumvention of any privacy settings or security measures contained on the Platform.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              8. Changes to Our Privacy Policy
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-violet-100 rounded-full p-2 mr-3">
+                <FileText className="w-5 h-5 text-violet-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                8. Changes to Our Privacy Policy
+              </h2>
+            </div>
             <p className="mb-4">
               It is our policy to post any changes we make to our Privacy Policy on this page. If we make material changes to how we treat our users' personal information, we will notify you through a notice on the Platform home page. The date the Privacy Policy was last revised is identified at the top of the page. You are responsible for periodically visiting our Platform and this Privacy Policy to check for any changes.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              9. Contact Information
-            </h2>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-pink-100 rounded-full p-2 mr-3">
+                <Shield className="w-5 h-5 text-pink-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                9. Contact Information
+              </h2>
+            </div>
             <div className="mb-6">
               <p className="mb-2">To ask questions or comment about this Privacy Policy and our privacy practices, contact us at:</p>
               <p className="mb-1">[Support Email Address]</p>
@@ -255,39 +394,98 @@ function PrivacyPolicy() {
               <p className="mb-1">[Company Address]</p>
             </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              10. App Store Requirements (Google Play Store and Apple App Store)
-            </h2>
-            <div className="mb-6">
-              <p className="mb-4">We adhere to the privacy policy requirements of both the Google Play Store and the Apple App Store. These requirements include:</p>
-              <ul className="list-disc pl-6 mb-4">
-                <li><strong>Full Transparency:</strong> Clearly disclosing how the app collects, uses, shares, and retains data.</li>
-                <li><strong>Personal and Sensitive Information:</strong> Handling personal and sensitive information (e.g., location, contacts, payment info) with extreme care, and requesting explicit user consent before collecting or using it.</li>
-                <li><strong>Data Access:</strong> Specifying the purpose of data access and linking it to core app functionality.</li>
-                <li><strong>Third Parties:</strong> Disclosing any third parties with whom data is shared (e.g., analytics or advertising providers) and ensuring their adherence to the same privacy standards.</li>
-                <li><strong>Accessibility:</strong> Providing a link to the Privacy Policy in the app store listing and within the app itself for easy user access.</li>
-                <li><strong>Updates:</strong> Regularly updating the Privacy Policy to reflect any changes in data collection practices or regulations.</li>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-indigo-100 rounded-full p-2 mr-3">
+                <Shield className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                10. App Store Requirements (Google Play Store and Apple App Store)
+              </h2>
+            </div>
+            <div className="bg-indigo-50 rounded-xl p-6 mb-6">
+              <p className="mb-4 text-gray-700">We adhere to the privacy policy requirements of both the Google Play Store and the Apple App Store. These requirements include:</p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Full Transparency:</strong> <span className="text-gray-700">Clearly disclosing how the app collects, uses, shares, and retains data.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Personal and Sensitive Information:</strong> <span className="text-gray-700">Handling personal and sensitive information (e.g., location, contacts, payment info) with extreme care, and requesting explicit user consent before collecting or using it.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Data Access:</strong> <span className="text-gray-700">Specifying the purpose of data access and linking it to core app functionality.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Third Parties:</strong> <span className="text-gray-700">Disclosing any third parties with whom data is shared (e.g., analytics or advertising providers) and ensuring their adherence to the same privacy standards.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Accessibility:</strong> <span className="text-gray-700">Providing a link to the Privacy Policy in the app store listing and within the app itself for easy user access.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Updates:</strong> <span className="text-gray-700">Regularly updating the Privacy Policy to reflect any changes in data collection practices or regulations.</span></div>
+                </li>
               </ul>
             </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              11. Compliance with Saudi Laws (Personal Data Protection Law - PDPL)
-            </h2>
-            <div className="mb-6">
-              <p className="mb-4">We comply with the Personal Data Protection Law (PDPL) in the Kingdom of Saudi Arabia, which came into effect on September 14, 2023. Our obligations under this law include:</p>
-              <ul className="list-disc pl-6 mb-4">
-                <li><strong>Consent:</strong> Obtaining explicit consent from individuals before collecting or processing their personal data, unless another legal basis permits it.</li>
-                <li><strong>Purpose Limitation:</strong> Collecting only personal data necessary to achieve the specified purpose.</li>
-                <li><strong>Data Minimization:</strong> Collecting only the minimum personal data necessary to achieve the specified purpose.</li>
-                <li><strong>Data Subject Rights:</strong> Respecting individuals' rights regarding their personal data, including the right to access, correct, withdraw consent, and request deletion of their data.</li>
-                <li><strong>Data Security:</strong> Implementing appropriate technical and organizational security measures to protect personal data from unauthorized access, disclosure, alteration, damage, or loss.</li>
-                <li><strong>Data Retention:</strong> Retaining personal data only for the period necessary to fulfill the purpose for which it was collected, or as required by law.</li>
-                <li><strong>Data Transfer:</strong> Ensuring that any transfer of personal data outside the Kingdom of Saudi Arabia complies with PDPL requirements.</li>
-                <li><strong>Breach Notification:</strong> Notifying the competent authority and data subjects in the event of any personal data breach that may cause significant harm.</li>
+            <div className="flex items-center mb-6 mt-12">
+              <div className="bg-green-100 rounded-full p-2 mr-3">
+                <Lock className="w-5 h-5 text-green-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                11. Compliance with Saudi Laws (Personal Data Protection Law - PDPL)
+              </h2>
+            </div>
+            <div className="bg-green-50 rounded-xl p-6 mb-6">
+              <p className="mb-4 text-gray-700">We comply with the Personal Data Protection Law (PDPL) in the Kingdom of Saudi Arabia, which came into effect on September 14, 2023. Our obligations under this law include:</p>
+              <ul className="space-y-3 mb-4">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Consent:</strong> <span className="text-gray-700">Obtaining explicit consent from individuals before collecting or processing their personal data, unless another legal basis permits it.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Purpose Limitation:</strong> <span className="text-gray-700">Collecting only personal data necessary to achieve the specified purpose.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Data Minimization:</strong> <span className="text-gray-700">Collecting only the minimum personal data necessary to achieve the specified purpose.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Data Subject Rights:</strong> <span className="text-gray-700">Respecting individuals' rights regarding their personal data, including the right to access, correct, withdraw consent, and request deletion of their data.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Data Security:</strong> <span className="text-gray-700">Implementing appropriate technical and organizational security measures to protect personal data from unauthorized access, disclosure, alteration, damage, or loss.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Data Retention:</strong> <span className="text-gray-700">Retaining personal data only for the period necessary to fulfill the purpose for which it was collected, or as required by law.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Data Transfer:</strong> <span className="text-gray-700">Ensuring that any transfer of personal data outside the Kingdom of Saudi Arabia complies with PDPL requirements.</span></div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong className="text-gray-900">Breach Notification:</strong> <span className="text-gray-700">Notifying the competent authority and data subjects in the event of any personal data breach that may cause significant harm.</span></div>
+                </li>
               </ul>
-              <p className="mb-4">We regularly review our practices to ensure ongoing compliance with the PDPL and any future implementing regulations or amendments.</p>
+              <p className="mb-4 text-gray-700">We regularly review our practices to ensure ongoing compliance with the PDPL and any future implementing regulations or amendments.</p>
             </div>
           </div>
+        </div>
+        
+        {/* Footer */}
+        <div className="text-center py-8">
+          <p className="text-gray-500 text-sm">
+            © 2025 ARAKNE Platform. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
