@@ -678,12 +678,12 @@ function HomePage() {
             {currentContent.cta.description}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp animate-delay-200">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp animate-delay-200">
             <Button className="btn-primary px-8 py-3 text-lg font-semibold rounded-lg">
               {currentContent.cta.button}
             </Button>
             <span className="opacity-70">{currentContent.cta.email}</span>
-          </div>
+          </div> */}
         </div>
       </section>
 
