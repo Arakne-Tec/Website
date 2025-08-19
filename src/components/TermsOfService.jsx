@@ -377,15 +377,15 @@ function TermsOfService() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 opacity-70" />
-                    <span>support@arakne.com</span>
+                    <span>ceo@arakne.com.sa</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 opacity-70" />
-                    <span>+966 XX XXX XXXX</span>
+                    <span>+966595500900</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Globe className="w-5 h-5 opacity-70" />
-                    <span>www.arakne.com</span>
+                    <span>www.arakne.com.sa</span>
                   </div>
                 </div>
               </div>
