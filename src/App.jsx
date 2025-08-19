@@ -422,17 +422,17 @@ function App() {
                 {currentContent.hero.description}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              {/* <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button className="btn-primary px-8 py-3 text-lg font-semibold rounded-lg">
                   {currentContent.hero.cta}
                 </Button>
                 <Button className="btn-secondary px-8 py-3 text-lg font-semibold rounded-lg">
                   {currentContent.hero.downloadApp}
                 </Button>
-              </div>
+              </div> */}
 
               {/* App Store Links */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://apps.apple.com/app/arakne" target="_blank" rel="noopener noreferrer">
                   <img 
                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
@@ -447,7 +447,7 @@ function App() {
                     className="h-12 hover-scale"
                   />
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div className="animate-fadeInUp animate-delay-200">
@@ -641,7 +641,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16 animate-fadeInUp">
             {currentContent.testimonials.title}
@@ -672,7 +672,7 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA Section */}
       <section className="py-20" style={{ backgroundColor: '#2c2c2c', color: '#f5f1eb' }}>
@@ -685,14 +685,14 @@ function App() {
               {currentContent.cta.description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button className="btn-primary px-8 py-3 text-lg font-semibold rounded-lg">
                 {currentContent.cta.button}
               </Button>
-            </div>
+            </div> */}
 
             {/* App Store Links */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="https://apps.apple.com/app/arakne" target="_blank" rel="noopener noreferrer">
                 <img 
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
@@ -707,10 +707,10 @@ function App() {
                   className="h-12 hover-scale"
                 />
               </a>
-            </div>
+            </div> */}
 
-            <p className="text-lg opacity-70">{currentContent.cta.email}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+            {/* <p className="text-lg opacity-70">{currentContent.cta.email}</p> */}
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
               <input 
                 type="email" 
                 placeholder={isArabic ? "أدخل بريدك الإلكتروني" : "Enter your email"}
@@ -720,7 +720,7 @@ function App() {
               <Button className="btn-secondary px-6 py-3 rounded-lg">
                 {isArabic ? 'اشترك' : 'Subscribe'}
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
