@@ -635,7 +635,7 @@ function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16 animate-fadeInUp">
             {currentContent.testimonials.title}
@@ -666,7 +666,7 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20" style={{ backgroundColor: '#2c2c2c', color: '#f5f1eb' }}>
