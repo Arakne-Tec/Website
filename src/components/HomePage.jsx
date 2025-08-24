@@ -47,7 +47,7 @@ function HomePage() {
       },
       // Hero Section
       hero: {
-        title: "معدات التأجير الاحترافية، بكل بساطة",
+        title: "تأجير معدات الفعاليات والرياضية - خدمة مميزة وسهلة",
         subtitle: "تأجير المعدات أصبح أسهل للجميع",
         description:
           "اكتشف أكبر منصة لتأجير المعدات في المملكة العربية السعودية. من معدات الفعاليات إلى المعدات الرياضية، نربطك بأفضل الموردين المحليين.",
@@ -123,19 +123,10 @@ function HomePage() {
       },
       // Saudi Focus
       saudiFocus: {
-        title: "خدمة شاملة في جميع أنحاء المملكة العربية السعودية",
+        title: "خدماتنا الآن في الرياض، وقريباً في جميع أنحاء المملكة",
         description:
-          "نحن نخدم بفخر العملاء في جميع مدن المملكة العربية السعودية مع شبكة واسعة من الموردين المحليين الموثوقين.",
-        cities: [
-          "الرياض",
-          "جدة",
-          "الدمام",
-          "مكة",
-          "المدينة",
-          "الطائف",
-          "تبوك",
-          "أبها",
-        ],
+          "نحن فخورون ببدء تقديم خدماتنا في الرياض، مع خطط للتوسع وخدمة العملاء في جميع مدن المملكة العربية السعودية قريباً.",
+        cities: ["الرياض"],
       },
       // Benefits
       benefits: {
@@ -221,7 +212,7 @@ function HomePage() {
       },
       // Hero Section
       hero: {
-        title: "Professional Equipment Rental, Made Simple",
+        title: "Event & Sports Equipment Rental - Premium and Easy Service",
         subtitle: "Equipment rental made easier for everyone",
         description:
           "Discover Saudi Arabia's largest equipment rental marketplace. From event equipment to sports gear, we connect you with the best local suppliers.",
@@ -298,19 +289,10 @@ function HomePage() {
       },
       // Saudi Focus
       saudiFocus: {
-        title: "Comprehensive Service Across Saudi Arabia",
+        title: "Now Serving Riyadh, Expanding Across Saudi Arabia Soon",
         description:
-          "We proudly serve customers in all cities across Saudi Arabia with a wide network of trusted local suppliers.",
-        cities: [
-          "Riyadh",
-          "Jeddah",
-          "Dammam",
-          "Mecca",
-          "Medina",
-          "Taif",
-          "Tabuk",
-          "Abha",
-        ],
+          "We are proud to launch our services in Riyadh and plan to expand our network to serve customers in all cities across Saudi Arabia in the near future.",
+        cities: ["Riyadh"],
       },
       // Benefits
       benefits: {
