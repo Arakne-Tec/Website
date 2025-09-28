@@ -1,8 +1,11 @@
 import { Button } from '@/components/ui/button.jsx'
 import { ArrowLeft, FileText, Users, Shield, CreditCard, AlertTriangle, Scale, Globe, Mail, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function TermsOfService() {
+  const [language, setLanguage] = useState('ar')
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header */}
@@ -32,384 +35,402 @@ function TermsOfService() {
             ARAKNE Platform - Comprehensive Terms and Conditions
           </p>
           <p className="text-lg opacity-80 mt-4">
-            Last updated: January 2024
+            Last updated: September 23, 2025
           </p>
         </div>
       </div>
 
-      {/* Table of Contents */}
+      {/* Language Toggle */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <FileText className="w-8 h-8 text-blue-600" />
-              Table of Contents
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <a href="#introduction" className="block p-4 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
-                <span className="font-medium text-blue-800">1. Introduction</span>
-              </a>
-              <a href="#definitions" className="block p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
-                <span className="font-medium text-green-800">2. Definitions</span>
-              </a>
-              <a href="#services" className="block p-4 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
-                <span className="font-medium text-purple-800">3. Legal Scope of Services</span>
-              </a>
-              <a href="#contract" className="block p-4 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
-                <span className="font-medium text-orange-800">4. Electronic Contract</span>
-              </a>
-              <a href="#terms-of-use" className="block p-4 rounded-lg bg-red-50 hover:bg-red-100 transition-colors">
-                <span className="font-medium text-red-800">5. Terms of Use</span>
-              </a>
-              <a href="#registration" className="block p-4 rounded-lg bg-indigo-50 hover:bg-indigo-100 transition-colors">
-                <span className="font-medium text-indigo-800">6. Account Registration</span>
-              </a>
-              <a href="#licenses" className="block p-4 rounded-lg bg-pink-50 hover:bg-pink-100 transition-colors">
-                <span className="font-medium text-pink-800">7. Licenses and Restrictions</span>
-              </a>
-              <a href="#unacceptable" className="block p-4 rounded-lg bg-yellow-50 hover:bg-yellow-100 transition-colors">
-                <span className="font-medium text-yellow-800">8. Unacceptable Use</span>
-              </a>
-              <a href="#lessor" className="block p-4 rounded-lg bg-teal-50 hover:bg-teal-100 transition-colors">
-                <span className="font-medium text-teal-800">9. Lessor (Seller) Policy</span>
-              </a>
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <div className="flex justify-center space-x-4">
+              <button 
+                onClick={() => setLanguage('ar')} 
+                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  language === 'ar' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                العربية
+              </button>
+              <button 
+                onClick={() => setLanguage('en')} 
+                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  language === 'en' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                English
+              </button>
             </div>
           </div>
 
-          {/* Introduction Section */}
-          <section id="introduction" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-blue-600" />
-                </div>
-                1. Introduction
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="mb-4">
-                  Welcome to the ARAKNE platform ("Platform," "Website," or "Application"). These Terms of Service ("Terms") govern your use of our platform and services. By accessing or using ARAKNE, you agree to be bound by these Terms.
+          {/* Arabic Content */}
+          {language === 'ar' && (
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-8" dir="rtl">
+              <div className="prose prose-lg max-w-none text-right">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">شروط وأحكام منصة أراكني</h1>
+                <p className="text-lg text-gray-600 mb-8">تاريخ السريان: 23 سبتمبر 2025</p>
+                
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  مرحباً بكم في منصة أراكني. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام المنصة.
                 </p>
-                <p className="mb-4">
-                  ARAKNE is operated by ARAKNE Technology, a company committed to providing innovative rental solutions while ensuring compliance with applicable laws and regulations.
-                </p>
-                <p>
-                  Please read these Terms carefully before using our services. If you do not agree with any part of these Terms, you must not use our platform.
-                </p>
-              </div>
-            </div>
-          </section>
 
-          {/* Definitions Section */}
-          <section id="definitions" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-green-600" />
-                </div>
-                2. Definitions
-              </h2>
-              <div className="space-y-4">
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"Platform" or "ARAKNE":</div>
-                  <div className="text-gray-700">Refers to the ARAKNE website, mobile application, and all related services provided by ARAKNE Technology.</div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"User" or "you":</div>
-                  <div className="text-gray-700">Refers to anyone who registers an account or uses the Platform, whether a Lessor (seller) or a Lessee (consumer).</div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"Lessor" (Seller):</div>
-                  <div className="text-gray-700">Refers to any individual, organization, or entity that offers equipment or goods for rent through the Platform.</div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"Lessee" (Consumer):</div>
-                  <div className="text-gray-700">Refers to any individual, organization, or entity that rents equipment from Lessors.</div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"Rental Agreement":</div>
-                  <div className="text-gray-700">Refers to the contract concluded between the Lessor and the Lessee for rental operations.</div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"Content":</div>
-                  <div className="text-gray-700">Refers to all information, data, text, images, videos, and other materials available on the Platform.</div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-2">"Laws":</div>
-                  <div className="text-gray-700">Refers to the applicable laws and regulations in the country where the contract between the Lessor and the Lessee is concluded.</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Legal Scope of Services */}
-          <section id="services" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <Scale className="w-6 h-6 text-purple-600" />
-                </div>
-                3. Legal Scope of Services
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. مقدمة ومعلومات الشركة</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">1.1. عن أراكني</h3>
                 <p className="mb-4">
-                  <strong>3.1.</strong> ARAKNE is an electronic platform that operates as an open market and intermediary between Lessors and Lessees, connecting the Lessor who offers goods for rent with the Lessee who requests to rent one of these goods. Our role is limited to providing mediation services via the Platform, facilitating connections between parties for their final agreement. We do not have any supervisory or regulatory authority over the Lessor, nor are we representatives or agents of the Lessees.
+                  تحكم شروط الاستخدام هذه وصولك إلى واستخدامك لمنصة أراكني، التي تملكها وتديرها شركة أراكني للتقنية (Arakne Technology Company).
                 </p>
                 
                 <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                  <h4 className="font-semibold text-blue-900 mb-3">Our Services Include:</h4>
+                  <h4 className="font-semibold text-blue-900 mb-3">معلومات الشركة:</h4>
                   <ul className="space-y-2 text-blue-800">
-                    <li>• Free account creation for Lessees, and subscription for Lessors to one of the packages offered by the Website.</li>
-                    <li>• Providing a secure platform for listing and browsing rental equipment.</li>
-                    <li>• Providing various online payment methods suitable for all users.</li>
-                    <li>• Payments are processed securely via external service providers, with the Platform collecting a commission ranging from 5% to 15% of each rental transaction, depending on the item's classification.</li>
+                    <li>• اسم الشركة: شركة أراكني للتقنية</li>
+                    <li>• السجل التجاري: 7050413611</li>
+                    <li>• العنوان: الرياض، المملكة العربية السعودية</li>
+                    <li>• البريد الإلكتروني: support@arakne.com.sa</li>
+                    <li>• الهاتف: +966595500900</li>
+                    <li>• ساعات العمل: الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً (بتوقيت السعودية)</li>
                   </ul>
                 </div>
-                
-                <p className="mb-4">
-                  <strong>3.2.</strong> Advertisements for goods offered for rent are from the Lessor to the Lessee, without any intervention from the ARAKNE platform in providing the service to the Lessee. The platform monitors all inquiries and attempts to resolve issues that may arise between the two parties, in addition to managing requests made on the Website.
-                </p>
-                
-                <p>
-                  <strong>3.3.</strong> The Company is not a party to any rental agreements between the Lessor and the Lessee.
-                </p>
-              </div>
-            </div>
-          </section>
 
-          {/* Electronic Contract */}
-          <section id="contract" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-orange-600" />
-                </div>
-                4. Electronic Contract
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">1.2. نظرة عامة على الخدمة</h3>
                 <p className="mb-4">
-                  <strong>4.1.</strong> These terms constitute a fully legally binding electronic contract between ARAKNE Technology, as the owner and operator of the ARAKNE platform, and you as a user (Lessor and Lessee). By using the Platform, you agree to these terms and become bound by them as you would by written contracts, and they produce the same legal effects as such contracts.
+                  أراكني هي منصة إلكترونية تربط مالكي المعدات (المؤجرين) بالأفراد والشركات التي تحتاج إلى استئجار المعدات (المستأجرين) لفترات قصيرة، مع التركيز في البداية على معدات الفعاليات والرياضة في الرياض.
                 </p>
-              </div>
-            </div>
-          </section>
 
-          {/* Terms of Use */}
-          <section id="terms-of-use" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-red-600" />
-                </div>
-                5. Terms of Use
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="mb-4">
-                  By using the ARAKNE platform, you acknowledge and agree that:
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">1.3. قبول الشروط</h3>
+                <p className="mb-6">
+                  باستخدامك لمنصة أراكني، فإنك توافق على هذه الشروط. إذا كنت لا توافق، يرجى عدم استخدام منصتنا. هذه الشروط متوافقة مع القوانين السعودية.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>You are of legal age to enter into contracts, or you have the consent of a parent or legal guardian, and you bear full responsibility for your actions and the consequences of using the Platform, including payment operations.</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>You will use the Platform in compliance with all applicable laws and regulations.</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>You will not use the Platform for any illegal or unauthorized purposes.</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>You will respect the rights and property of other users and third parties.</div>
-                  </li>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">2. الأهلية والتسجيل</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1. متطلبات العمر والأهلية</h3>
+                <ul className="list-disc mr-6 mb-4">
+                  <li>يجب أن لا يقل عمرك عن 18 عاماً.</li>
+                  <li>يجب أن تكون لديك الأهلية القانونية لإبرام العقود.</li>
+                  <li>يجب عليك الامتثال لجميع القوانين السعودية المعمول بها.</li>
                 </ul>
-              </div>
-            </div>
-          </section>
 
-          {/* Account Registration and Membership */}
-          <section id="registration" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-indigo-600" />
-                </div>
-                6. Account Registration and Membership
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="mb-4">
-                  <strong>6.1.</strong> To access certain sections and features of the ARAKNE platform, you must register an account, either for free for the Lessee, or by subscription for the Lessor, and you agree to:
-                </p>
-                
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.2. تسجيل الحساب</h3>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-green-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-green-900 mb-3">Account Requirements:</h4>
+                    <h4 className="font-semibold text-green-900 mb-3">للمستأجرين (تسجيل مجاني):</h4>
                     <ul className="space-y-2 text-green-800">
-                      <li>• Provide accurate and complete information</li>
-                      <li>• Maintain the security of your account</li>
-                      <li>• Update information as necessary</li>
-                      <li>• Accept responsibility for all account activity</li>
+                      <li>• تقديم معلومات شخصية دقيقة (الاسم، رقم الهاتف، البريد الإلكتروني).</li>
+                      <li>• إكمال التحقق من الهوية (نفاذ عند توفره، أو تحقق بديل).</li>
+                      <li>• تحميل صورة شخصية للملف الشخصي.</li>
+                      <li>• الموافقة على هذه الشروط.</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-red-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-red-900 mb-3">Prohibited Activities:</h4>
-                    <ul className="space-y-2 text-red-800">
-                      <li>• Creating multiple accounts</li>
-                      <li>• Sharing account credentials</li>
-                      <li>• Using stolen or fake payment cards</li>
-                      <li>• Providing false information</li>
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-3">للمؤجرين (عمولة فقط - لا يوجد اشتراك مدفوع):</h4>
+                    <ul className="space-y-2 text-blue-800">
+                      <li>• رقم سجل تجاري سعودي ساري المفعول (للشركات) أو هوية وطنية سعودية (للأفراد).</li>
+                      <li>• إكمال عملية التحقق من العمل/الشخصية.</li>
+                      <li>• الامتثال لجميع متطلبات المؤجر الموضحة في القسم 7.</li>
                     </ul>
                   </div>
                 </div>
-                
-                <p>
-                  <strong>6.4.</strong> If we fail to take any action against any violations by you or any other person, this does not mean a waiver by ARAKNE Technology of its right to take any legal action regarding those violations, nor does it guarantee taking such actions against all potential violations of these terms.
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.3. أمن الحساب</h3>
+                <ul className="list-disc mr-6 mb-6">
+                  <li>حافظ على كلمة مرورك آمنة وسرية.</li>
+                  <li>أبلغنا فوراً بأي وصول غير مصرح به.</li>
+                  <li>أنت مسؤول عن جميع الأنشطة التي تتم تحت حسابك.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">3. كيفية عمل أراكني</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">3.1. دورنا</h3>
+                <p className="mb-4">
+                  تعمل أراكني كمنصة وسيطة تربط المؤجرين بالمستأجرين. نحن نقدم التكنولوجيا ونسهل الاتصالات، ولكننا لسنا طرفاً في اتفاقيات الإيجار بين المستخدمين.
                 </p>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">3.2. عملية الحجز</h3>
+                <ul className="list-disc mr-6 mb-4">
+                  <li>يقدم المستأجر طلب إيجار مع التواريخ والمتطلبات.</li>
+                  <li>يقوم المؤجر بمراجعة الطلب والرد (قبول/رفض) خلال فترة زمنية معقولة.</li>
+                  <li>عند القبول، يدفع المستأجر عبر منصتنا.</li>
+                  <li>يقوم الطرفان بتنسيق تفاصيل الاستلام/التسليم.</li>
+                  <li>تبدأ فترة الإيجار كما هو متفق عليه.</li>
+                  <li>إعادة المعدات وإطلاق الوديعة (إن وجدت).</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">3.3. معالجة الدفع</h3>
+                <ul className="list-disc mr-6 mb-6">
+                  <li>تتم معالجة جميع المدفوعات عبر معالجات دفع آمنة تابعة لجهات خارجية.</li>
+                  <li>تحصل أراكني على عمولة من الإيجارات الناجحة فقط (لا توجد رسوم اشتراك).</li>
+                  <li>يتم الاحتفاظ بمبالغ الوديعة (إذا طلبها المؤجر) بشكل آمن ويتم إطلاقها بناءً على حالة المعدات.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">4. التسليم والأداء</h2>
+                <p className="mb-4">إذا تأخر المؤجر في التسليم عن التاريخ المتفق عليه، يجوز لك:</p>
+                <ul className="list-disc mr-6 mb-6">
+                  <li>إلغاء الإيجار واسترداد المبلغ بالكامل إذا كان التأخير يجعل المعدات غير صالحة للغرض المقصود (مثل تجاوز تاريخ الفعالية).</li>
+                  <li>المطالبة بتكاليف إضافية تكبدتها بسبب التأخير، مع مراعاة طبيعة الإيجار (مثل معدات الفعاليات).</li>
+                  <li>تُستثنى حالات القوة القاهرة.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">5. قواعد المنصة والأنشطة المحظورة</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.1. الاستخدام المقبول</h3>
+                <ul className="list-disc mr-6 mb-4">
+                  <li>استخدام المنصة بشكل قانوني وبحسن نية.</li>
+                  <li>تقديم معلومات دقيقة.</li>
+                  <li>احترام حقوق وممتلكات المستخدمين الآخرين.</li>
+                  <li>إجراء جميع الاتصالات الأولية عبر منصتنا.</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.2. الأنشطة المحظورة</h3>
+                <ul className="list-disc mr-6 mb-4">
+                  <li>إنشاء حسابات وهمية أو تقديم معلومات خاطئة.</li>
+                  <li>التحايل على هيكل الرسوم لدينا عن طريق ترتيب صفقات مباشرة بعد الالتقاء عبر أراكني.</li>
+                  <li>نشر محتوى غير لائق أو مسيء أو غير قانوني.</li>
+                  <li>إلحاق الضرر بمنصتنا أو اختراقها أو إساءة استخدامها.</li>
+                  <li>انتهاك القوانين السعودية.</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.3. التحايل على الرسوم</h3>
+                <p className="mb-4">يُحظر على المستخدمين ترتيب اتفاقيات إيجار مباشرة خارج أراكني بعد التواصل عبر منصتنا. تؤدي الانتهاكات إلى:</p>
+                <ul className="list-disc mr-6 mb-6">
+                  <li>تحذير للمخالفة الأولى.</li>
+                  <li>تعليق الحساب للمخالفات المتكررة.</li>
+                  <li>غرامات تعادل رسوم العمولة التي تم تجنبها.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">20. سياسة الإلغاء والاسترداد</h2>
+                <ul className="list-disc mr-6 mb-4">
+                  <li>يمكن للمستأجر إلغاء حجزه مجاناً حتى 24 ساعة قبل تاريخ الفعالية، ما لم يحدد المؤجر سياسة إلغاء مختلفة بوضوح في قائمة المعدات الخاصة به.</li>
+                  <li>الإلغاءات في نفس اليوم (تاريخ الفعالية) غير مؤهلة للاسترداد، باستثناء الحالات التي يغطيها القسم 20.6 (عدم استلام البضاعة).</li>
+                  <li>لا يمكن إلغاء العناصر المخصصة (مثل الزينة الشخصية، أو اللافتات المخصصة، أو المعدات المطلوبة خصيصاً) بمجرد بدء الإنتاج.</li>
+                  <li>ستتم معالجة جميع المبالغ المستردة في غضون (3) أيام عمل للإلغاءات التي تتم قبل أكثر من 48 ساعة من الفعالية.</li>
+                  <li>عمولة منصة أراكني غير قابلة للاسترداد في جميع سيناريوهات الإلغاء.</li>
+                  <li>إذا أكد المستأجر عدم استلام البضاعة، فسيتم استرداد المبلغ بالكامل بغض النظر عن التوقيت.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">معلومات الاتصال</h2>
+                <p className="mb-2">للاستفسارات أو الدعم أو الشكاوى:</p>
+                <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">شركة أراكني للتقنية</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• البريد الإلكتروني: support@arakne.com.sa</li>
+                    <li>• الهاتف: +966595500900</li>
+                    <li>• العنوان: الرياض، المملكة العربية السعودية</li>
+                    <li>• السجل التجاري: 7050413611</li>
+                    <li>• ساعات العمل: الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً</li>
+                  </ul>
+                </div>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">أحكام ختامية</h2>
+                <p className="mb-4"><strong>الاتفاق الكامل:</strong> تشكل هذه الشروط، جنباً إلى جنب مع سياسة الخصوصية لدينا، الاتفاق الكامل بينك وبين أراكني.</p>
+                <p className="mb-4"><strong>التحديثات:</strong> قد نقوم بتحديث هذه الشروط مع نمو أعمالنا. تحقق بانتظام من التغييرات.</p>
+                <p className="mb-4"><strong>اللغة:</strong> تم إعداد هذه الشروط باللغة العربية. في حالة التعارض مع النسخ المترجمة، تسود النسخة العربية.</p>
+
+                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-blue-900 mb-3">معلومات الوثيقة:</h4>
+                  <ul className="space-y-2 text-blue-800">
+                    <li>• الإصدار: 1.0</li>
+                    <li>• تاريخ السريان: 23 سبتمبر 2025</li>
+                    <li>• المراجعة التالية: [6 أشهر بعد الإطلاق]</li>
+                    <li>• اللغة: العربية (الترجمة الإنجليزية متاحة عند الطلب)</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </section>
+          )}
 
-          {/* Licenses and Restrictions on Use */}
-          <section id="licenses" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-pink-600" />
+          {/* English Content */}
+          {language === 'en' && (
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <div className="prose prose-lg max-w-none">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">Arakne Platform Terms and Conditions</h1>
+                <p className="text-lg text-gray-600 mb-8">Effective Date: September 23, 2025</p>
+                
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  Welcome to the Arakne platform. Please read these Terms and Conditions carefully before using the platform.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction and Company Information</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">1.1. About Arakne</h3>
+                <p className="mb-4">
+                  These Terms of Use govern your access to and use of the Arakne platform, owned and operated by Arakne Technology Company.
+                </p>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-blue-900 mb-3">Company Information:</h4>
+                  <ul className="space-y-2 text-blue-800">
+                    <li>• Company Name: Arakne Technology Company</li>
+                    <li>• Commercial Registration: 7050413611</li>
+                    <li>• Address: Riyadh, Kingdom of Saudi Arabia</li>
+                    <li>• Email: support@arakne.com.sa</li>
+                    <li>• Phone: +966595500900</li>
+                    <li>• Working Hours: Sunday to Thursday, 9:00 AM to 5:00 PM (Saudi Time)</li>
+                  </ul>
                 </div>
-                7. Licenses and Restrictions on Use
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">1.2. Service Overview</h3>
+                <p className="mb-4">
+                  Arakne is an electronic platform that connects equipment owners (Lessors) with individuals and businesses that need to rent equipment (Lessees) for short periods, initially focusing on event and sports equipment in Riyadh.
+                </p>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">1.3. Acceptance of Terms</h3>
                 <p className="mb-6">
-                  Subject to your compliance with these Terms, ARAKNE grants you a limited, non-exclusive, non-transferable license to access and use the Platform for its intended purposes.
+                  By using the Arakne platform, you agree to these Terms. If you do not agree, please do not use our platform. These Terms are compliant with Saudi laws.
                 </p>
-                
-                <div className="bg-yellow-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-yellow-900 mb-3">License Restrictions:</h4>
-                  <p className="text-yellow-800">
-                    You may not modify, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products, or services obtained from the Platform without our express written consent.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          {/* Unacceptable Use */}
-          <section id="unacceptable" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                  <AlertTriangle className="w-6 h-6 text-yellow-600" />
-                </div>
-                8. Unacceptable Use
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="mb-6">
-                  You agree not to use the Platform for any of the following prohibited activities:
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-red-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-red-900 mb-3">Illegal Activities:</h4>
-                    <ul className="space-y-2 text-red-800">
-                      <li>• Violating any applicable laws or regulations</li>
-                      <li>• Engaging in fraudulent activities</li>
-                      <li>• Money laundering or terrorist financing</li>
-                      <li>• Intellectual property infringement</li>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Eligibility and Registration</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1. Age and Eligibility Requirements</h3>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>You must be at least 18 years old.</li>
+                  <li>You must have the legal capacity to enter into contracts.</li>
+                  <li>You must comply with all applicable Saudi laws.</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.2. Account Registration</h3>
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-3">For Lessees (Free Registration):</h4>
+                    <ul className="space-y-2 text-green-800">
+                      <li>• Provide accurate personal information (name, phone number, email).</li>
+                      <li>• Complete identity verification (Nafath when available, or alternative verification).</li>
+                      <li>• Upload a personal profile picture.</li>
+                      <li>• Agree to these Terms.</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-orange-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-orange-900 mb-3">Platform Abuse:</h4>
-                    <ul className="space-y-2 text-orange-800">
-                      <li>• Attempting to hack or compromise security</li>
-                      <li>• Uploading malicious software or viruses</li>
-                      <li>• Spamming or sending unsolicited communications</li>
-                      <li>• Interfering with platform operations</li>
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-3">For Lessors (Commission Only - No Paid Subscription):</h4>
+                    <ul className="space-y-2 text-blue-800">
+                      <li>• Valid Saudi Commercial Registration number (for companies) or Saudi National ID (for individuals).</li>
+                      <li>• Complete business/personal verification process.</li>
+                      <li>• Comply with all Lessor requirements outlined in Section 7.</li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
 
-          {/* Lessor (Seller) Policy */}
-          <section id="lessor" className="mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                  <CreditCard className="w-6 h-6 text-teal-600" />
-                </div>
-                9. Lessor (Seller) Policy
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <div className="space-y-6">
-                  <div className="bg-teal-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-teal-900 mb-3">Lessor Responsibilities:</h4>
-                    <ul className="space-y-2 text-teal-800">
-                      <li>• <strong>9.7.</strong> The Lessor must maintain the confidentiality and privacy of any information obtained from the Lessee.</li>
-                      <li>• <strong>9.8.</strong> The Lessor is obligated to rent the item according to the contract concluded between them and the Lessee without any legal responsibility on the ARAKNE platform, and the Lessor is obligated to deliver the item to the Lessee without delay.</li>
-                      <li>• <strong>9.9.</strong> The Lessor acknowledges that the ARAKNE platform has no relationship with the Lessee and is not an agent thereof, and therefore we have no supervisory or regulatory authority over the Lessor or Lessee, and each party is personally responsible according to this agreement and according to the law.</li>
-                    </ul>
-                  </div>
-                  
-                  <p>
-                    <strong>9.11.</strong> In case of a dispute between the Lessor and the Lessee regarding any order, the contract concluded between them will be enforced through amicable or judicial settlement means without recourse to the ARAKNE platform in any way. Any dispute between the Lessor and the Lessee must be resolved directly between the parties.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.3. Account Security</h3>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>Keep your password safe and confidential.</li>
+                  <li>Notify us immediately of any unauthorized access.</li>
+                  <li>You are responsible for all activities under your account.</li>
+                </ul>
 
-          {/* Contact Information */}
-          <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-xl shadow-lg p-8 mt-12">
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-              <Mail className="w-8 h-8" />
-              Contact Information
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-                <p className="mb-4 opacity-90">
-                  If you have any questions about these Terms of Service, please contact us:
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">3. How Arakne Works</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">3.1. Our Role</h3>
+                <p className="mb-4">
+                  Arakne acts as an intermediary platform connecting Lessors with Lessees. We provide the technology and facilitate communications, but we are not a party to the rental agreements between users.
                 </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 opacity-70" />
-                    <span>ceo@arakne.com.sa</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 opacity-70" />
-                    <span>+966595500900</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Globe className="w-5 h-5 opacity-70" />
-                    <span>www.arakne.com.sa</span>
-                  </div>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">3.2. Booking Process</h3>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>Lessee submits a rental request with dates and requirements.</li>
+                  <li>Lessor reviews the request and responds (accept/reject) within a reasonable timeframe.</li>
+                  <li>Upon acceptance, Lessee pays through our platform.</li>
+                  <li>Both parties coordinate pickup/delivery details.</li>
+                  <li>The rental period begins as agreed.</li>
+                  <li>Return of equipment and release of deposit (if any).</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">3.3. Payment Processing</h3>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>All payments are processed via secure third-party payment processors.</li>
+                  <li>Arakne earns a commission only from successful rentals (no subscription fees).</li>
+                  <li>Deposit amounts (if requested by the Lessor) are held securely and released based on equipment condition.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Consumer Rights</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">4.1. Delivery and Performance</h3>
+                <p className="mb-4">If the Lessor delays delivery beyond the agreed date, you may:</p>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>Cancel the rental and receive a full refund if the delay renders the equipment unsuitable for its intended purpose (e.g., exceeding the event date).</li>
+                  <li>Claim additional costs incurred due to the delay, considering the nature of the rental (e.g., event equipment).</li>
+                  <li>Force majeure events are excluded.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Platform Rules and Prohibited Activities</h2>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.1. Acceptable Use</h3>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>Use the platform legally and in good faith.</li>
+                  <li>Provide accurate information.</li>
+                  <li>Respect the rights and property of other users.</li>
+                  <li>Conduct all initial communications through our platform.</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.2. Prohibited Activities</h3>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>Creating fake accounts or providing false information.</li>
+                  <li>Circumventing our fee structure by arranging direct deals after meeting through Arakne.</li>
+                  <li>Posting inappropriate, offensive, or illegal content.</li>
+                  <li>Harming, hacking, or misusing our platform.</li>
+                  <li>Violating Saudi laws.</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">5.3. Fee Circumvention</h3>
+                <p className="mb-4">Users are prohibited from arranging direct rental agreements outside Arakne after connecting through our platform. Violations lead to:</p>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>A warning for the first offense.</li>
+                  <li>Account suspension for repeated offenses.</li>
+                  <li>Fines equivalent to the circumvented commission fees.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">19. Cancellation and Refund Policy</h2>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>A Lessee may cancel their booking for free up to 24 hours before the event date, unless the Lessor clearly specifies a different cancellation policy in their equipment listing.</li>
+                  <li>Same-day cancellations (event date) are not eligible for a refund, except in cases covered by Section 20.6 (non-receipt of goods).</li>
+                  <li>Customized items (e.g., personalized decorations, custom banners, specially ordered equipment) cannot be canceled once production has begun.</li>
+                  <li>All refunds will be processed within three (3) business days for cancellations made more than 48 hours before the event.</li>
+                  <li>Arakne platform commission is non-refundable in all cancellation scenarios.</li>
+                  <li>If the Lessee confirms non-receipt of goods, a full refund will be issued regardless of timing.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
+                <p className="mb-2">For inquiries, support, or complaints:</p>
+                <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Arakne Technology Company</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Email: support@arakne.com.sa</li>
+                    <li>• Phone: +966595500900</li>
+                    <li>• Address: Riyadh, Kingdom of Saudi Arabia</li>
+                    <li>• Commercial Registration: 7050413611</li>
+                    <li>• Working Hours: Sunday to Thursday, 9:00 AM to 5:00 PM</li>
+                  </ul>
+                </div>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Concluding Provisions</h2>
+                <p className="mb-4"><strong>Entire Agreement:</strong> These Terms, along with our Privacy Policy, constitute the entire agreement between you and Arakne.</p>
+                <p className="mb-4"><strong>Updates:</strong> We may update these Terms as our business grows. Check regularly for changes.</p>
+                <p className="mb-4"><strong>Language:</strong> These Terms are prepared in Arabic. In case of conflict with translated versions, the Arabic version prevails.</p>
+
+                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-blue-900 mb-3">Document Information:</h4>
+                  <ul className="space-y-2 text-blue-800">
+                    <li>• Version: 1.0</li>
+                    <li>• Effective Date: September 23, 2025</li>
+                    <li>• Next Review: [6 months after launch]</li>
+                    <li>• Language: Arabic (English translation available upon request)</li>
+                  </ul>
                 </div>
               </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Legal Notice</h3>
-                <p className="opacity-90">
-                  These Terms of Service are governed by the laws of Saudi Arabia. Any disputes arising from these terms will be subject to the jurisdiction of the competent courts in Riyadh, Saudi Arabia.
-                </p>
-              </div>
             </div>
-          </div>
+          )}
 
           {/* Agreement Section */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg p-8 mt-12 text-center">
             <h3 className="text-2xl font-bold mb-4">
-              Agreement to Terms
+              {language === 'ar' ? 'الموافقة على الشروط' : 'Agreement to Terms'}
             </h3>
             <p className="mb-6 text-lg opacity-90">
-              By using the ARAKNE platform, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+              {language === 'ar' 
+                ? 'باستخدام منصة أراكني، فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بهذه الشروط والأحكام.'
+                : 'By using the ARAKNE platform, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.'
+              }
             </p>
             <Link to="/">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
-                I Agree and Continue
+                {language === 'ar' ? 'أوافق والمتابعة' : 'I Agree and Continue'}
               </Button>
             </Link>
           </div>
